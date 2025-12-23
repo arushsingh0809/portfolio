@@ -69,9 +69,11 @@ const Play = () => {
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-background to-muted rounded-sm">
                   <div className="text-center space-y-4">
-                    <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
-                    <p className="text-foreground text-lg font-semibold">Click to Load Game</p>
-                    <p className="text-muted-foreground text-sm">HexGL will load when you're ready</p>
+                    <button className="group relative px-12 py-6 text-2xl font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105">
+                      <span className="relative z-10">▶ PLAY</span>
+                      <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 rounded-lg transition-opacity"></div>
+                    </button>
+                    <p className="text-muted-foreground text-sm">Click to load and start HexGL</p>
                   </div>
                 </div>
               )}
