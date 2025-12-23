@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 15% 92%;
+    --foreground: 220 15% 15%;
+
+    --card: 200 15% 88%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 240 60% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 15% 85%;
+    --secondary-foreground: 220 15% 15%;
+
+    --muted: 200 10% 80%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 240 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 15% 80%;
+    --input: 200 15% 80%;
+    --ring: 240 60% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --highlight: 0 0% 10%;
+    --highlight-foreground: 0 0% 100%;
+    --surface: 0 0% 95%;
+    --surface-elevated: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Typography */
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 220 15% 10%;
+    --foreground: 200 15% 92%;
+
+    --card: 220 15% 14%;
+    --card-foreground: 200 15% 92%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 200 15% 92%;
+
+    --primary: 240 60% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 200 15% 92%;
+
+    --muted: 220 10% 25%;
+    --muted-foreground: 200 10% 60%;
+
+    --accent: 240 60% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 240 60% 60%;
+
+    --highlight: 0 0% 95%;
+    --highlight-foreground: 0 0% 10%;
+    --surface: 220 15% 15%;
+    --surface-elevated: 220 15% 18%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-mono);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1200px;
+  }
+
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground transition-all duration-200 text-sm tracking-wide hover:-translate-y-0.5;
+  }
+
+  .nav-link-active {
+    @apply text-foreground underline underline-offset-4;
+  }
+
+  .logo-badge {
+    @apply bg-blue-600 text-white px-2 py-1 text-sm font-medium transition-transform duration-200 hover:scale-105;
+  }
+
+  .section-card {
+    @apply bg-card rounded-sm p-6;
+  }
+
+  .quote-text {
+    @apply text-2xl md:text-3xl lg:text-4xl font-sans font-medium leading-tight;
+  }
+
+  .contact-link {
+    @apply text-foreground font-mono text-sm border border-foreground px-4 py-2 hover:bg-foreground hover:text-background transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .keyboard-key {
+    @apply px-4 py-2 bg-muted rounded-md text-xs font-mono border-b-4 border-muted-foreground/30 shadow-sm cursor-pointer transition-all duration-100 hover:translate-y-0.5 hover:border-b-2 hover:shadow-none active:translate-y-1 active:border-b-0 select-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
