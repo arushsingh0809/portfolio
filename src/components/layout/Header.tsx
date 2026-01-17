@@ -40,7 +40,7 @@ const Header = () => {
                 WORK
               </Link>
               <a 
-                href="https://www.dropbox.com/scl/fi/qsc5xwbndqt2nv9wy4q9a/Arush-Singh_resume.pdf?rlkey=fw2umoccognfsrmdtf5b97vx2&st=epgbhblj&dl=0"
+                href="https://www.dropbox.com/scl/fi/4n9hv8eycsgoo3ukoa55f/Resume_Arush_2026.pdf?rlkey=5m41wvxz002o1ti0mzijjvv9r&st=2ozpcqh4&dl=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link text-[10px] sm:text-xs"

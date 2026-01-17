@@ -134,7 +134,7 @@ const Footer = () => {
           <div className="flex flex-wrap gap-4">
             <a
               ref={buttonRef}
-              href="https://www.dropbox.com/scl/fi/qsc5xwbndqt2nv9wy4q9a/Arush-Singh_resume.pdf?rlkey=fw2umoccognfsrmdtf5b97vx2&st=zwra75jp&dl=0"
+              href="https://www.dropbox.com/scl/fi/4n9hv8eycsgoo3ukoa55f/Resume_Arush_2026.pdf?rlkey=5m41wvxz002o1ti0mzijjvv9r&st=2ozpcqh4&dl=0"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 px-6 py-3 border-2 border-foreground text-foreground font-mono text-xs overflow-hidden hover:text-background z-0"
@@ -200,7 +200,7 @@ const Footer = () => {
             </Link>
             <Link to="/" className="nav-link text-xs" onClick={handleHomeClick}>WORK</Link>
             <a 
-              href="https://www.dropbox.com/scl/fi/qsc5xwbndqt2nv9wy4q9a/Arush-Singh_resume.pdf?rlkey=fw2umoccognfsrmdtf5b97vx2&st=epgbhblj&dl=0"
+              href="https://www.dropbox.com/scl/fi/4n9hv8eycsgoo3ukoa55f/Resume_Arush_2026.pdf?rlkey=5m41wvxz002o1ti0mzijjvv9r&st=2ozpcqh4&dl=0"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link text-xs"
